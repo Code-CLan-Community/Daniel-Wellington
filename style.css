@@ -68,9 +68,46 @@ body {
     
 }
 .content{
-    position: absolute;
-    width: 60vw;
+    position: absolute; 
+    top: 20%;
+    left: 5%;
+    width: 50vw;
     height: 80vh;
-    background-color: red;
+    background-color: rgb(220, 192, 192);
     z-index: 4555;
+}
+.sub-content{
+    display: flex;
+}
+.image{
+    width: 25vw;
+    height: 60vh;
+    background-color: #fff;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 60vh;
+    background-color: rgb(191, 138, 69);
+    
+}
+.image>img{
+    padding: 20px;
+    width: 30vw;
+    height: 60vh;
+    object-fit: cover;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.detail>p{
+    padding: 40px;
+    width: auto;
 }
