@@ -7,14 +7,16 @@
 html,
 body {
   cursor: pointer;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  /* height: 100vh; */
   background-color: #fff;
+  scrollbar-width: none;
+  font-family: "Titillium Web";
 }
 
 .main {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   font-family: sans-serif;
 }
@@ -24,23 +26,32 @@ body {
   width: 50vw;
   height: 100vh;
 }
-
-.right {
-  /* display: flex;
-    justify-content: end; */
-  width: 50vw;
+.content {
+  /* display: flex; */
+  position: absolute;
+  top: 8%;
+  left: 15%;
+  width: 45vw;
   height: 100vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 4555;
+  border: 1px solid #b8b8b8;
+}
+.right {
+  position: absolute;
+  right: 0;
+  width: 45vw;
+  height: 120vh;
   background: url(https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwaf1f2581/images/Titan/Catalog/90130NL01_1.jpg?sw=800&sh=800);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
-
 .links {
   display: flex;
   justify-content: end;
   width: 100%;
   height: 10%;
-  /* background-color: aqua; */
 }
 
 .menu {
@@ -50,7 +61,6 @@ body {
   font-size: 20px;
   width: 100%;
   height: 10%;
-  /* background-color: aqua; */
 }
 
 .menu > i {
@@ -68,30 +78,20 @@ body {
   color: #fff;
   gap: 40px;
   font-size: 20px;
-  /* margin-top: 5%; */
   margin-right: 5%;
 }
+.LINKS> ul li {
+  transition: 0.25s 1s ease-in-out;
+}
+.links > ul  li:hover {
+  border-bottom: 1px solid whitesmoke;
 
-.content {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 50vw;
-  height: 80vh;
-  background-color: rgb(220, 192, 192);
-  z-index: 4555;
 }
 
 .sub-content {
   display: flex;
-  /* width: 100vw; */
+  justify-content: end;
   height: 60vh;
-}
-
-.image {
-  width: 25vw;
-  height: 60vh;
-  background-color: #fff;
 }
 
 .detail {
@@ -100,16 +100,19 @@ body {
   justify-content: center;
   align-items: flex-start;
   /* margin-left: 20px; */
-  width: 25vw;
+  width: 26vw;
   height: 60vh;
+  margin-top: 40px;
   background-color: #fff;
 }
 
-.image > img {
-  padding: 20px;
-  width: 30vw;
-  height: 60vh;
+.sub-content > img {
+  position: absolute;
+  width: 40%;
+  height: 70%;
   object-fit: cover;
+  left: -6%;
+  top: 5%;
 }
 
 .heading-price {
@@ -173,27 +176,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .buttons > .buy,
 .save {
   margin-right: 10px;
-  padding: 15px 30px;
+  padding: 10px 20px;
 }
 
 .buttons > .buy {
   color: #fff;
   background-color: black;
   border: 2px solid black;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .buttons > .save {
   color: black;
   background-color: transparent;
   border: 2px solid black;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -205,4 +208,47 @@ body {
 .buy:hover {
   background-color: white;
   color: black;
+}
+.heading{
+  margin-top: 60px;
+  display:flex ;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.heading>h2{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.gird{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 5px ;
+}
+.catalog{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 240px;
+  height: 200px;
+  margin-right:10px ;
+  margin-left: 10px;
+}
+.catalog>img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
